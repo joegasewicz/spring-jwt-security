@@ -13,6 +13,30 @@
 
     <name>spring-jwt-security</name>
     <description>JWT authentication library for Spring Boot</description>
+    <url>https://github.com/joegasewicz/spring-jwt-security</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>joegasewicz</id>
+            <name>Joe Gasewicz</name>
+            <email>contact@josef.digital</email>
+            <url>https://josef.digital</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/joegasewicz/spring-jwt-security</url>
+        <connection>scm:git:git://github.com/joegasewicz/spring-jwt-security.git</connection>
+        <developerConnection>scm:git:ssh://github.com/joegasewicz/spring-jwt-security.git</developerConnection>
+    </scm>
 
     <properties>
         <java.version>17</java.version>
@@ -23,9 +47,9 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>6.1.4</version> <!-- ✅ specify version -->
+            <version>6.1.4</version>
         </dependency>
-        <!-- Spring AOP (for @Aspect) -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -37,6 +61,18 @@
             <artifactId>jjwt-api</artifactId>
             <version>0.11.5</version>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
 
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -46,34 +82,18 @@
         </dependency>
 
         <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-impl</artifactId>
-            <version>0.11.5</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-jackson</artifactId>
-            <version>0.11.5</version>
-            <scope>runtime</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- Mockito -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>5.12.0</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
 </project>
